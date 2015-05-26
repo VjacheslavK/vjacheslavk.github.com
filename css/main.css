@@ -11,8 +11,9 @@ body {
 	height: 325px;
 	margin: 70px auto;
 	border: 1px solid #cccccc;
-	border-radius: 1px 1px 5px 5px;
+	border-radius: 5px;
 	box-shadow: 2px 2px 2px #cccccc;
+    overflow: hidden;
 }
 
 .product-img {
