@@ -5,16 +5,16 @@
 	<title>Info-Box</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/lib/jquery-1.11.2.min.js"></script>
-	<script src="js/info-box.js"></script>
 </head>
 <body>
 <!-- should make by script -->
 	<div class="content">
 		<div class="product-img">
+			<img>
 		</div>
 		<div class="info">
-			<h1 class="title">Time to Share: 6 for $3.99*</h1>
-			<p class="description">Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.</p>
+			<h1 class="title"></h1>
+			<p class="description"></p>
 		</div>
 		<div class="show-det">
 			<a href="#">
@@ -41,39 +41,6 @@
 	</div>
 	<a href="/Test">Test</a>
 <!-- should make by script -->
-	<script>
-		'use strict';
-
-		(function() {
-			var targetNode = $('.content'),
-				targetUrl = 'json/info_box.json';
-
-			$.getJSON(targetUrl, function(data) {
-					console.log(data);
-					$.each(data, function(index, value) {
-						console.log(data[index].title);
-					});
-				// $.parseJSON(data);
-				}
-			);
-
-			// var a = [1,2,3,4,5,6,7,8];
-			// $.each(a, function(index, value) {
-			// 	console.log(index, value);
-			// });
-
-			//another one method
-
-			// $.ajax({
-			// 	type: 'GET',
-			// 	url: url,
-			// 	data: 'string',
-			// 	dataType: 'json',
-			// 	mimeType: 'application/json',
-			// 	cache: true
-			// });
-		})();
-
-	</script>
+	<script src="js/info-box.js"></script>
 </body>
 </html>

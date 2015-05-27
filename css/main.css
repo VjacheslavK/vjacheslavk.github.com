@@ -16,11 +16,11 @@ body {
     overflow: hidden;
 }
 
-.product-img {
+/*.product-img {
 	width: 312px;
 	height: 200px;
 	background: url(../imgs/comp_plate_promo1.png) no-repeat;
-}
+}*/
 
 .title {
 	font: bold 1.3em/1.25 Arial;
@@ -48,6 +48,7 @@ body {
 
 .buttons {
   	margin-top: 30px;
+    cursor: pointer;
 }
 
 /* sprites by http://spritegen.website-performance.org */
