@@ -20,7 +20,41 @@
 				indexOfLastContentObject = contentObjectsFromServer.length-1;
 				indexOfCurrentContentObject = 0;
 				indexOfFirstContentObject = 0;
+
+				function displayContent(indexOfCurrentContentObject) {
+					$($.find('img')).stop().hide();
+					$($.find('img')).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+					$($.find('img')).fadeIn(400);
+					$($.find('.title')).text(contentObjectsFromServer[indexOfCurrentContentObject].title);
+					$($.find('.description')).text(contentObjectsFromServer[indexOfCurrentContentObject].description);
 				}
+
+				displayContent(indexOfFirstContentObject);
+
+				$('.button-btn-bg-white-right').on('click', function() {
+					if (indexOfCurrentContentObject === indexOfLastContentObject) {
+						indexOfCurrentContentObject = indexOfFirstContentObject;
+						displayContent(indexOfCurrentContentObject);
+					} else {
+						indexOfCurrentContentObject += 1;
+						displayContent(indexOfCurrentContentObject);
+					}
+				});
+
+				$('.button-btn-bg-white-left').on('click', function() {
+					if (indexOfCurrentContentObject === indexOfFirstContentObject) {
+						indexOfCurrentContentObject = indexOfLastContentObject;
+						displayContent(indexOfCurrentContentObject);
+					} else {
+						indexOfCurrentContentObject -= 1;
+						displayContent(indexOfCurrentContentObject);
+					}
+				});
+
+				$('.show-det').on('click', function() {
+					$($.find('img')).stop().fadeToggle(400);
+				});
+					}
 			);
 
 			// contentObjectsFromServer = [
@@ -61,39 +95,39 @@
 			// indexOfFirstContentObject = 0;
 			// indexOfLastContentObject = contentObjectsFromServer.length-1;
 
-			function displayContent(indexOfCurrentContentObject) {
-				$($.find('img')).stop().hide();
-				$($.find('img')).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-				$($.find('img')).fadeIn(400);
-				$($.find('.title')).text(contentObjectsFromServer[indexOfCurrentContentObject].title);
-				$($.find('.description')).text(contentObjectsFromServer[indexOfCurrentContentObject].description);
-			}
+			// function displayContent(indexOfCurrentContentObject) {
+			// 	$($.find('img')).stop().hide();
+			// 	$($.find('img')).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+			// 	$($.find('img')).fadeIn(400);
+			// 	$($.find('.title')).text(contentObjectsFromServer[indexOfCurrentContentObject].title);
+			// 	$($.find('.description')).text(contentObjectsFromServer[indexOfCurrentContentObject].description);
+			// }
 
-			displayContent(indexOfFirstContentObject);
+			// displayContent(indexOfFirstContentObject);
 
-			$('.button-btn-bg-white-right').on('click', function() {
-				if (indexOfCurrentContentObject === indexOfLastContentObject) {
-					indexOfCurrentContentObject = indexOfFirstContentObject;
-					displayContent(indexOfCurrentContentObject);
-				} else {
-					indexOfCurrentContentObject += 1;
-					displayContent(indexOfCurrentContentObject);
-				}
-			});
+			// $('.button-btn-bg-white-right').on('click', function() {
+			// 	if (indexOfCurrentContentObject === indexOfLastContentObject) {
+			// 		indexOfCurrentContentObject = indexOfFirstContentObject;
+			// 		displayContent(indexOfCurrentContentObject);
+			// 	} else {
+			// 		indexOfCurrentContentObject += 1;
+			// 		displayContent(indexOfCurrentContentObject);
+			// 	}
+			// });
 
-			$('.button-btn-bg-white-left').on('click', function() {
-				if (indexOfCurrentContentObject === indexOfFirstContentObject) {
-					indexOfCurrentContentObject = indexOfLastContentObject;
-					displayContent(indexOfCurrentContentObject);
-				} else {
-					indexOfCurrentContentObject -= 1;
-					displayContent(indexOfCurrentContentObject);
-				}
-			});
+			// $('.button-btn-bg-white-left').on('click', function() {
+			// 	if (indexOfCurrentContentObject === indexOfFirstContentObject) {
+			// 		indexOfCurrentContentObject = indexOfLastContentObject;
+			// 		displayContent(indexOfCurrentContentObject);
+			// 	} else {
+			// 		indexOfCurrentContentObject -= 1;
+			// 		displayContent(indexOfCurrentContentObject);
+			// 	}
+			// });
 
-			$('.show-det').on('click', function() {
-				$($.find('img')).stop().fadeToggle(400);
-			});
+			// $('.show-det').on('click', function() {
+			// 	$($.find('img')).stop().fadeToggle(400);
+			// });
 
 			//another one method
 
