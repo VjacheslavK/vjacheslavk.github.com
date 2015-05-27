@@ -15,9 +15,11 @@
 					// 	console.log(data[index].title);
 					// });
 				contentObjectsFromServer = data; // JSON from server should record to 'contentObjectsFromServer' variable
-				// numberOfContentObjects = contentObjectsFromServer.length;
-				console.log(contentObjectsFromServer.length);
-				// indexOfLastContentObject = contentObjectsFromServer.length-1;
+				numberOfContentObjects = contentObjectsFromServer.length;
+				// console.log(contentObjectsFromServer.length);
+				indexOfLastContentObject = contentObjectsFromServer.length-1;
+				indexOfCurrentContentObject = 0;
+				indexOfFirstContentObject = 0;
 				}
 			);
 
@@ -55,8 +57,8 @@
 		// $('.content').find('.product-img').css('background', 'url(../imgs/' + contentObjectsFromServer[0].img + ') no-repeat');
 
 			// numberOfContentObjects = contentObjectsFromServer.length;
-			indexOfCurrentContentObject = 0; // will be changed on closure
-			indexOfFirstContentObject = 0;
+			// indexOfCurrentContentObject = 0; // will be changed on closure
+			// indexOfFirstContentObject = 0;
 			// indexOfLastContentObject = contentObjectsFromServer.length-1;
 
 			function displayContent(indexOfCurrentContentObject) {
