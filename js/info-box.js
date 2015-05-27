@@ -1,6 +1,6 @@
 'use strict';
 
-		// (function() {
+		(function() {
 			var targetJsonUrl = 'json/info_box.json',
 				// targetNode = $('.content'),
 				contentObjectsFromServer,
@@ -101,4 +101,4 @@
 			// 	mimeType: 'application/json',
 			// 	cache: true
 			// });
-		// })();
+		})();
