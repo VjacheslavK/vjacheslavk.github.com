@@ -79,7 +79,7 @@
 	indexOfLastContentObject = contentObjectsFromServer.length - 1;
 	indexOfCurrentContentObject = 0;
 	indexOfFirstContentObject = 0;
-	var 
+	
 	function displayContent(indexOfCurrentContentObject) {
 		$($.find('img')).stop().hide();
 		$($.find('img')).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
