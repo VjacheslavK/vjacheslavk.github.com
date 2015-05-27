@@ -14,10 +14,10 @@
 					// $.each(data, function(index, value) {
 					// 	console.log(data[index].title);
 					// });
-				contentObjectsFromServer = data;
-				console.log(contentObjectsFromServer); // JSON from server should record to 'contentObjectsFromServer' variable
+				contentObjectsFromServer = data; // JSON from server should record to 'contentObjectsFromServer' variable
 				}
 			);
+			console.log(contentObjectsFromServer);
 
 			// contentObjectsFromServer = [
 			//     {
