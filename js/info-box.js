@@ -15,11 +15,11 @@
 					// 	console.log(data[index].title);
 					// });
 				contentObjectsFromServer = data; // JSON from server should record to 'contentObjectsFromServer' variable
-				numberOfContentObjects = contentObjectsFromServer.length;
-				indexOfLastContentObject = contentObjectsFromServer.length-1;
+				// numberOfContentObjects = contentObjectsFromServer.length;
+				console.log(contentObjectsFromServer.length);
+				// indexOfLastContentObject = contentObjectsFromServer.length-1;
 				}
 			);
-			console.log(contentObjectsFromServer);
 
 			// contentObjectsFromServer = [
 			//     {
