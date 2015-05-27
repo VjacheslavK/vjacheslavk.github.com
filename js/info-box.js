@@ -17,7 +17,7 @@
 				contentObjectsFromServer = data; // JSON from server should record to 'contentObjectsFromServer' variable
 				}
 			);
-			console.log(contentObjectsFromServer.length);
+			console.log(contentObjectsFromServer);
 
 			// contentObjectsFromServer = [
 			//     {
