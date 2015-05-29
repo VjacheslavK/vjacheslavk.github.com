@@ -170,8 +170,9 @@ table {
 }
 .link-det {
     font: bold 12px Arial;
-    color: #ed6c20;    /*position: absolute;
-        bottom: 15px;*/
+    color: #ed6c20;
+    /*position: absolute;*/
+    /*bottom: 40px;*/
 }
 .link-det:hover {
     color: gray;

@@ -163,12 +163,12 @@
 	// adding events for buttons
 
 	function displayContent(indexOfCurrentContentObject) {
+		$('.link-det').hide().fadeIn();
 		$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-		$('.product-img img').stop().hide().fadeIn();
-		// $('.product-img').css('height', '200px');
-		$('.title').stop().hide().fadeIn();
+		$('.product-img img').hide().fadeIn();
+		$('.title').hide().fadeIn();
 		$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
-		$('.description').stop().hide().fadeIn();
+		$('.description').hide().fadeIn();
 		$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
 	}
 
@@ -195,7 +195,13 @@
 	});
 
 	$('.show-det').on('click', function() {
-		// $($.find('.product-img')).css('height', '0');
 		$('.product-img img').stop().fadeToggle();
+		// $('.info').slideUp('fast');
+		// $('.info').slideDown('fast');
+		if ( $( ".info" ).is( ":hidden" ) ) {
+			$( ".info" ).slideUp("slow");
+		} else {
+			$( ".info" ).slideDown("slow");
+		}
 	});
 })();
