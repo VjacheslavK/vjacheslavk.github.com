@@ -42,6 +42,7 @@ table {
     -moz-box-shadow: 2px 2px 2px #cccccc;
     filter: progid:DXImageTransform.Microsoft.dropshadow(offX=2, offY=2, color=#cccccc);
     filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#cccccc, strength=10);
+    zoom: 1;
     overflow: hidden;
     position: relative;    /*font-family: Arial;*/
 }
