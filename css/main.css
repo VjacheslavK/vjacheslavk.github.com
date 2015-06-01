@@ -40,14 +40,11 @@ table {
     box-shadow: 2px 2px 2px #cccccc;
     -webkit-box-shadow: 2px 2px 2px #cccccc;
     -moz-box-shadow: 2px 2px 2px #cccccc;
-    /*filter: progid:DXImageTransform.Microsoft.dropshadow(offX=2, offY=2, color=#cccccc);
-    filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#cccccc, strength=10);
-    zoom: 1;*/
+    filter: progid:DXImageTransform.Microsoft.dropshadow(offX=2, offY=2, color=#cccccc);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=50, color=#cccccc, strength=10);
+    zoom: 1;
     overflow: hidden;
     position: relative;
-    filter: progid:DXImageTransform.Microsoft.dropshadow(offX=5, offY=5, color=#a1a1a1);
-    filter: progid:DXImageTransform.Microsoft.shadow(direction=135, color=#a1a1a1, strength=7);
-    zoom: 1;
 }
 .title {
     font: bold 1.3em/1.25 Arial;
