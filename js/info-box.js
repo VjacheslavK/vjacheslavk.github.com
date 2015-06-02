@@ -2,7 +2,6 @@
 
 (function() {
 	var targetJsonUrl = 'json/info_box.json',
-		// targetNode = $('.content'),
 		contentObjectsFromServer,
 		numberOfContentObjects,
 		indexOfCurrentContentObject,
@@ -22,6 +21,7 @@
 			$(node).hover(function() {
 				$(this).removeClass(classOutBtn);
 				$(this).addClass(classInBtn);
+				$(this).find('.control-btn').addClass('text-shadow');
 				if (classOutArrow && classInArrow) {
 					$(this).find('.arrow').removeClass(classOutArrow);
 					$(this).find('.arrow').addClass(classInArrow);
@@ -29,6 +29,7 @@
 			}, function() {
 				$(this).removeClass(classInBtn);
 				$(this).addClass(classOutBtn);
+				$(this).find('.control-btn').removeClass('text-shadow');
 				if (classOutArrow && classInArrow) {
 					$(this).find('.arrow').removeClass(classInArrow);
 					$(this).find('.arrow').addClass(classOutArrow);
@@ -55,10 +56,10 @@
 		// adding events for buttons
 
 		function displayContent(indexOfCurrentContentObject) {
-			$('.info').removeClass('info-collapse');
+			$('.description-note').removeClass('description-note-collapse');
 			$('.link-det').hide().fadeIn();
-			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 			$('.product-img img').hide().fadeIn();
+			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 			$('.title').hide().fadeIn();
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
 			$('.description').hide().fadeIn();
@@ -90,18 +91,16 @@
 		});
 
 		$('.show-det').on('click', function() {
-			if ($('.info').hasClass('info-collapse')) {
-				// $('.description').slideUp();
-				$('.info').toggleClass('info-collapse');
+			if ($('.description-note').hasClass('description-note-collapse')) {
+				$('.description-note').toggleClass('description-note-collapse');
 				$('.product-img img').stop().fadeToggle();
-				$('.title').hide().fadeIn();
-				$('.description').hide().fadeIn();
+				$('.description-note').hide().fadeIn();
 				$('.link-det').text('show details');
 				$('.link-det').hide().fadeIn();
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
-					$('.info').toggleClass('info-collapse');
-					$('.info').stop().hide().slideDown();
+					$('.description-note').toggleClass('description-note-collapse');
+					$('.description-note').stop().hide().slideDown();
 					$('.link-det').text('hide details');
 				});
 			}
@@ -145,6 +144,7 @@
 	// 	$(node).hover(function() {
 	// 		$(this).removeClass(classOutBtn);
 	// 		$(this).addClass(classInBtn);
+	// 		$(this).find('.control-btn').addClass('text-shadow');
 	// 		if (classOutArrow && classInArrow) {
 	// 			$(this).find('.arrow').removeClass(classOutArrow);
 	// 			$(this).find('.arrow').addClass(classInArrow);
@@ -152,6 +152,7 @@
 	// 	}, function() {
 	// 		$(this).removeClass(classInBtn);
 	// 		$(this).addClass(classOutBtn);
+	// 		$(this).find('.control-btn').removeClass('text-shadow');
 	// 		if (classOutArrow && classInArrow) {
 	// 			$(this).find('.arrow').removeClass(classInArrow);
 	// 			$(this).find('.arrow').addClass(classOutArrow);
@@ -178,10 +179,10 @@
 	// // adding events for buttons
 
 	// function displayContent(indexOfCurrentContentObject) {
-	// 	$('.info').removeClass('info-collapse');
+	// 	$('.description-note').removeClass('description-note-collapse');
 	// 	$('.link-det').hide().fadeIn();
-	// 	$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 	// 	$('.product-img img').hide().fadeIn();
+	// 	$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 	// 	$('.title').hide().fadeIn();
 	// 	$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
 	// 	$('.description').hide().fadeIn();
@@ -213,18 +214,16 @@
 	// });
 
 	// $('.show-det').on('click', function() {
-	// 	if ($('.info').hasClass('info-collapse')) {
-	// 		// $('.description').slideUp();
-	// 		$('.info').toggleClass('info-collapse');
+	// 	if ($('.description-note').hasClass('description-note-collapse')) {
+	// 		$('.description-note').toggleClass('description-note-collapse');
 	// 		$('.product-img img').stop().fadeToggle();
-	// 		$('.title').hide().fadeIn();
-	// 		$('.description').hide().fadeIn();
+	// 		$('.description-note').hide().fadeIn();
 	// 		$('.link-det').text('show details');
 	// 		$('.link-det').hide().fadeIn();
 	// 	} else {
 	// 		$('.product-img img').stop().fadeToggle(function() {
-	// 			$('.info').toggleClass('info-collapse');
-	// 			$('.info').stop().hide().slideDown();
+	// 			$('.description-note').toggleClass('description-note-collapse');
+	// 			$('.description-note').stop().hide().slideDown();
 	// 			$('.link-det').text('hide details');
 	// 		});
 	// 	}
