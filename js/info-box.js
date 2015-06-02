@@ -69,7 +69,8 @@
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title).hide().fadeIn();
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description).hide().fadeIn();
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note).hide().fadeIn();
-			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img).hide().fadeIn();
+			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+			// $('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img).hide().fadeIn();
 			// $('.product-img img').fadeIn();
 			// $('.info').fadeIn();
 			// $('.link-det').fadeIn();
