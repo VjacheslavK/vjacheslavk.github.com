@@ -41,7 +41,6 @@ table {
     -moz-box-shadow: 2px 2px 2px #cccccc;
     overflow: hidden;
     position: relative;
-    /*for IE*/
     filter: progid:DXImageTransform.Microsoft.dropshadow(offX=5, offY=5, color=#cccccc);
     filter: progid:DXImageTransform.Microsoft.shadow(direction=135, color=#cccccc, strength=5);
     zoom: 1;

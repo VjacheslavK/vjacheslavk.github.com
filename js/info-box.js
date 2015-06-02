@@ -15,7 +15,7 @@
 		indexOfCurrentContentObject = 0;
 		indexOfFirstContentObject = 0;
 
-		// adding hover effect for buttons
+		// adding hover effects for buttons
 
 		function inOut(node, classOutBtn, classInBtn, classOutArrow, classInArrow) {
 			$(node).hover(function() {
@@ -57,24 +57,16 @@
 
 		function displayContent(indexOfCurrentContentObject) {
 			$('.description-note').removeClass('description-note-collapse');
-			$('.product-img img').hide();
-			$('.info').hide();
-			$('.link-det').hide();
+			// $('.product-img img').hide();
+			// $('.info').hide();
+			// $('.link-det').hide();
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
-			// $('.link-det').hide().fadeIn();
-			// $('.product-img img').hide().fadeIn();
 			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 			$('.info').fadeIn();
 			$('.link-det').fadeIn();
 			$('.product-img img').fadeIn();
-			// $('.title').hide().fadeIn();
-			// $('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
-			// $('.description').hide().fadeIn();
-			// $('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
-			// $('.note').hide().fadeIn();
-			// $('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
 		}
 
 		displayContent(indexOfFirstContentObject);
@@ -82,9 +74,15 @@
 		$('.button-btn-bg-white-right').on('click', function() {
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
+				$('.product-img img').hide();
+				$('.info').hide();
+				$('.link-det').hide();
 				displayContent(indexOfCurrentContentObject);
 			} else {
 				indexOfCurrentContentObject += 1;
+				$('.product-img img').hide();
+				$('.info').hide();
+				$('.link-det').hide();
 				displayContent(indexOfCurrentContentObject);
 			}
 		});
@@ -92,9 +90,15 @@
 		$('.button-btn-bg-white-left').on('click', function() {
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
+				$('.product-img img').hide();
+				$('.info').hide();
+				$('.link-det').hide();
 				displayContent(indexOfCurrentContentObject);
 			} else {
 				indexOfCurrentContentObject -= 1;
+				$('.product-img img').hide();
+				$('.info').hide();
+				$('.link-det').hide();
 				displayContent(indexOfCurrentContentObject);
 			}
 		});
