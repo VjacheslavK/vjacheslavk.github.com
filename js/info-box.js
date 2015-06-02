@@ -69,7 +69,6 @@
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
-			$('.description-note').stop();
 			$('.link-det').text('show details');
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
@@ -81,7 +80,6 @@
 		});
 
 		$('.button-btn-bg-white-left').on('click', function() {
-			$('.description-note').stop();
 			$('.link-det').text('show details');
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
@@ -101,7 +99,7 @@
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
 					$('.description-note').toggleClass('description-note-collapse');
-					$('.description-note').hide().stop().slideDown();
+					$('.description-note').hide().slideDown();
 					$('.link-det').text('hide details');
 				});
 			}
