@@ -74,7 +74,7 @@
 			// $('.product-img img').fadeIn(function() {
 			// 	$(this).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 			// });
-			imgNode = '<img src="img/' + contentObjectsFromServer[indexOfCurrentContentObject].img + '">';
+			imgNode = '<img src="imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img + '">';
 			$('.product-img').html(imgNode).hide().fadeIn();
 			// $('.product-img img').fadeIn();
 			// $('.info').fadeIn();
