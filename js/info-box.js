@@ -56,12 +56,6 @@
 
 		// adding events for buttons
 
-		// function hideContent() {
-		// 	$('.product-img img').hide();
-		// 	$('.info').hide();
-		// 	$('.link-det').hide();
-		// }
-
 		function displayContent(indexOfCurrentContentObject) {
 			$('.description-note').removeClass('description-note-collapse');
 			$('.link-det').hide().fadeIn();
@@ -75,7 +69,6 @@
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
-			// hideContent();
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
 				displayContent(indexOfCurrentContentObject);
@@ -86,7 +79,6 @@
 		});
 
 		$('.button-btn-bg-white-left').on('click', function() {
-			// hideContent();
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
 				displayContent(indexOfCurrentContentObject);
@@ -101,13 +93,13 @@
 				$('.description-note').toggleClass('description-note-collapse');
 				$('.product-img img').stop().fadeToggle();
 				$('.description-note').hide().fadeIn();
-				$('.link-det').text('show details');
-				$('.link-det').hide().fadeIn();
+				$(this).find('.link-det').text('show details');
+				$(this).find('.link-det').hide().fadeIn();
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
 					$('.description-note').toggleClass('description-note-collapse');
 					$('.description-note').stop().hide().slideDown();
-					$('.link-det').text('hide details');
+					$(this).find('.link-det').text('hide details');
 				});
 			}
 		});
