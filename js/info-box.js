@@ -69,6 +69,13 @@
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
+			if ($('.description-note').hasClass('description-note-collapse')) {
+				$('.link-det').text('show details');
+			} else {
+				$('.product-img img').stop().fadeToggle(function() {
+					$('.link-det').text('hide details');
+				});
+			}
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
 				displayContent(indexOfCurrentContentObject);
