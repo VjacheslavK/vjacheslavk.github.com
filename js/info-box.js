@@ -55,11 +55,17 @@
 
 		// adding events for buttons
 
-		function displayContent(indexOfCurrentContentObject) {
-			$('.description-note').removeClass('description-note-collapse');
+		function hideContent() {
 			$('.product-img img').hide();
 			$('.info').hide();
 			$('.link-det').hide();
+		}
+
+		function displayContent(indexOfCurrentContentObject) {
+			$('.description-note').removeClass('description-note-collapse');
+			// $('.product-img img').hide();
+			// $('.info').hide();
+			// $('.link-det').hide();
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
@@ -72,6 +78,7 @@
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
+			hideContent();
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
 				displayContent(indexOfCurrentContentObject);
@@ -82,6 +89,7 @@
 		});
 
 		$('.button-btn-bg-white-left').on('click', function() {
+			hideContent();
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
 				displayContent(indexOfCurrentContentObject);
