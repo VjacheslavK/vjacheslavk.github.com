@@ -55,30 +55,30 @@
 
 		// adding events for buttons
 
-		function hideContent() {
-			$('.product-img img').hide();
-			$('.info').hide();
-			$('.link-det').hide();
-		}
+		// function hideContent() {
+		// 	$('.product-img img').hide();
+		// 	$('.info').hide();
+		// 	$('.link-det').hide();
+		// }
 
 		function displayContent(indexOfCurrentContentObject) {
 			$('.description-note').removeClass('description-note-collapse');
 			// $('.product-img img').hide();
 			// $('.info').hide();
 			// $('.link-det').hide();
-			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
-			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
-			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
-			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			$('.product-img img').fadeIn();
-			$('.info').fadeIn();
-			$('.link-det').fadeIn();
+			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title).hide().fadeIn();
+			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description).hide().fadeIn();
+			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note).hide().fadeIn();
+			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img).hide().fadeIn();
+			// $('.product-img img').fadeIn();
+			// $('.info').fadeIn();
+			// $('.link-det').fadeIn();
 		}
 
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
-			hideContent();
+			// hideContent();
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
 				displayContent(indexOfCurrentContentObject);
@@ -89,7 +89,7 @@
 		});
 
 		$('.button-btn-bg-white-left').on('click', function() {
-			hideContent();
+			// hideContent();
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
 				displayContent(indexOfCurrentContentObject);
