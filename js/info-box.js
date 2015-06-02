@@ -6,7 +6,8 @@
 		numberOfContentObjects,
 		indexOfCurrentContentObject,
 		indexOfFirstContentObject,
-		indexOfLastContentObject;
+		indexOfLastContentObject,
+		imgNode;
 
 	$.getJSON(targetJsonUrl, function(data) {
 		contentObjectsFromServer = data; // JSON from server should record to 'contentObjectsFromServer' variable
@@ -70,9 +71,11 @@
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description).hide().fadeIn();
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note).hide().fadeIn();
 			// $('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			$('.product-img img').fadeIn(function() {
-				$(this).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			});
+			// $('.product-img img').fadeIn(function() {
+			// 	$(this).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+			// });
+			imgNode = '<img src="img/' + contentObjectsFromServer[indexOfCurrentContentObject].img + '">';
+			$('.product-img').html(imgNode).hide().fadeIn();
 			// $('.product-img img').fadeIn();
 			// $('.info').fadeIn();
 			// $('.link-det').fadeIn();
