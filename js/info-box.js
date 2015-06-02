@@ -64,21 +64,12 @@
 
 		function displayContent(indexOfCurrentContentObject) {
 			$('.description-note').removeClass('description-note-collapse');
-			// $('.product-img img').hide();
-			// $('.info').hide();
-			// $('.link-det').hide();
+			$('.link-det').hide().fadeIn();
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title).hide().fadeIn();
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description).hide().fadeIn();
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note).hide().fadeIn();
-			// $('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			// $('.product-img img').fadeIn(function() {
-			// 	$(this).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			// });
 			imgNode = '<img src="imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img + '">';
 			$('.product-img').html(imgNode).hide().fadeIn();
-			// $('.product-img img').fadeIn();
-			// $('.info').fadeIn();
-			// $('.link-det').fadeIn();
 		}
 
 		displayContent(indexOfFirstContentObject);
