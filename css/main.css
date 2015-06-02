@@ -177,7 +177,7 @@ table {
 }
 .text-shadow {
     text-shadow: 1px 1px 2px black;
-    filter: Shadow(Color=black, Direction=120, Strength=2);
+    filter: Shadow(Color=black, Direction=120, Strength=1);
 }
 .arrow-left, .arrow-right {
     top: 8px
