@@ -57,15 +57,22 @@
 
 		function displayContent(indexOfCurrentContentObject) {
 			$('.description-note').removeClass('description-note-collapse');
-			$('.link-det').hide().fadeIn();
-			$('.product-img img').hide().fadeIn();
-			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			$('.title').hide().fadeIn();
 			$('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
-			$('.description').hide().fadeIn();
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
-			$('.note').hide().fadeIn();
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
+			// $('.link-det').hide().fadeIn();
+			// $('.product-img img').hide().fadeIn();
+			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+			$('.product-img img').hide().fadeIn();
+			// $('.title').hide().fadeIn();
+			// $('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
+			// $('.description').hide().fadeIn();
+			// $('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
+			// $('.note').hide().fadeIn();
+			// $('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
+			$('.info').hide().fadeIn();
+			$('.link-det').hide().fadeIn();
+
 		}
 
 		displayContent(indexOfFirstContentObject);
