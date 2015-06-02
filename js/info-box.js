@@ -67,9 +67,7 @@
 		}
 
 		function checkCollapse() {
-			if ($('.description-note').hasClass('description-note-collapse')) {
-				return;
-			} else {
+			if (!$('.description-note').hasClass('description-note-collapse')) {
 				$('.link-det').text('show details');
 			}
 		}
