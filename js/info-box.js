@@ -68,9 +68,9 @@
 
 		function checkCollapse() {
 			if ($('.description-note').hasClass('description-note-collapse')) {
-				$('.link-det').text('show details');
+				return;
 			} else {
-				$('.link-det').text('hide details');
+				$('.link-det').text('show details');
 			}
 		}
 
