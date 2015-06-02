@@ -66,14 +66,10 @@
 			$('.product-img').html(imgNode).hide().fadeIn();
 		}
 
-		function checkCollapse() {
-			$('.link-det').text('show details');
-		}
-
 		displayContent(indexOfFirstContentObject);
 
 		$('.button-btn-bg-white-right').on('click', function() {
-			checkCollapse();
+			$('.link-det').text('show details');
 			if (indexOfCurrentContentObject === indexOfLastContentObject) {
 				indexOfCurrentContentObject = indexOfFirstContentObject;
 				displayContent(indexOfCurrentContentObject);
@@ -84,7 +80,7 @@
 		});
 
 		$('.button-btn-bg-white-left').on('click', function() {
-			checkCollapse();
+			$('.link-det').text('show details');
 			if (indexOfCurrentContentObject === indexOfFirstContentObject) {
 				indexOfCurrentContentObject = indexOfLastContentObject;
 				displayContent(indexOfCurrentContentObject);
