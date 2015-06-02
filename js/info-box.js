@@ -91,15 +91,16 @@
 		});
 
 		$('.show-det').on('click', function() {
+			$('.description-note').stop();
 			if ($('.description-note').hasClass('description-note-collapse')) {
 				$('.description-note').toggleClass('description-note-collapse');
-				$('.product-img img').stop().fadeToggle();
+				$('.product-img img').fadeToggle();
 				$('.description-note').hide().fadeIn();
 				$('.link-det').text('show details');
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
 					$('.description-note').toggleClass('description-note-collapse');
-					$('.description-note').stop().hide().slideDown();
+					$('.description-note').hide().slideDown();
 					$('.link-det').text('hide details');
 				});
 			}
