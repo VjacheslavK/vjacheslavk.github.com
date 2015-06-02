@@ -93,8 +93,8 @@
 				$('.description-note').toggleClass('description-note-collapse');
 				$('.product-img img').stop().fadeToggle();
 				$('.description-note').hide().fadeIn();
-				$(this).find('.link-det').text('show details');
-				$(this).find('.link-det').hide().fadeIn();
+				$(this).find('.link-det').text('show details').hide().fadeIn();
+				// $(this).find('.link-det').hide().fadeIn();
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
 					$('.description-note').toggleClass('description-note-collapse');
