@@ -93,13 +93,13 @@
 				$('.description-note').toggleClass('description-note-collapse');
 				$('.product-img img').stop().fadeToggle();
 				$('.description-note').hide().fadeIn();
-				$(this).find('.link-det').text('show details').hide().fadeIn();
+				$(this).find('a').text('show details').hide().fadeIn();
 				// $(this).find('.link-det').hide().fadeIn();
 			} else {
 				$('.product-img img').stop().fadeToggle(function() {
 					$('.description-note').toggleClass('description-note-collapse');
 					$('.description-note').stop().hide().slideDown();
-					$(this).find('.link-det').text('hide details');
+					$(this).find('a').text('hide details');
 				});
 			}
 		});
