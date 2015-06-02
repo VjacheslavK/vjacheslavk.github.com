@@ -70,7 +70,7 @@
 			$('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description).hide().fadeIn();
 			$('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note).hide().fadeIn();
 			// $('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
-			$('.product-img img').hide().fadeIn(function() {
+			$('.product-img img').fadeIn(function() {
 				$(this).attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
 			});
 			// $('.product-img img').fadeIn();
