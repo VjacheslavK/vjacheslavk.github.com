@@ -66,6 +66,8 @@
 			// $('.link-det').hide().fadeIn();
 			// $('.product-img img').hide().fadeIn();
 			$('.product-img img').attr('src', 'imgs/' + contentObjectsFromServer[indexOfCurrentContentObject].img);
+			$('.info').fadeIn();
+			$('.link-det').fadeIn();
 			$('.product-img img').fadeIn();
 			// $('.title').hide().fadeIn();
 			// $('.title').text(contentObjectsFromServer[indexOfCurrentContentObject].title);
@@ -73,9 +75,6 @@
 			// $('.description').text(contentObjectsFromServer[indexOfCurrentContentObject].description);
 			// $('.note').hide().fadeIn();
 			// $('.note').text(contentObjectsFromServer[indexOfCurrentContentObject].note);
-			$('.info').fadeIn();
-			$('.link-det').fadeIn();
-
 		}
 
 		displayContent(indexOfFirstContentObject);
