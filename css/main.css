@@ -47,7 +47,11 @@ table {
     zoom: 1;
 }
 .info {
+<<<<<<< HEAD
     padding: 0px 10px;
+=======
+    padding: 10px;
+>>>>>>> origin/master
 }
 .title {
     font: bold 15pt Arial;
@@ -55,11 +59,18 @@ table {
 }
 .description-note {
     height: 29px;
+<<<<<<< HEAD
 }
 .collapse {
     overflow: hidden;
 }
 .expand {
+=======
+    overflow: hidden;
+}
+.description-note-collapse {
+    height: 232px;
+>>>>>>> origin/master
     overflow: auto;
 }
 .description, .show-det {
@@ -75,6 +86,7 @@ table {
     font: normal 8pt Arial;
     color: gray;
     text-align: justify;
+<<<<<<< HEAD
 }
 .show-det {
     padding-top: 5px;
@@ -85,13 +97,26 @@ table {
 .link-det {
     color: #ed6c20;
 }
+=======
+}
+.show-det, .buttons {
+    margin-left: 10px;
+}
+.link-det {
+    color: #ed6c20;
+}
+>>>>>>> origin/master
 .link-det:hover {
     color: gray;
 }
 .buttons {
     cursor: pointer;
     position: absolute;
+<<<<<<< HEAD
     bottom: 7px;
+=======
+    bottom: 2px;
+>>>>>>> origin/master
 }
 .buttons div {
 
@@ -169,7 +194,10 @@ table {
     background-position: -147px -41px;
     margin-left: 38px
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 /*end sprites styles*/
 .prev-btn {
     top: 13px;
